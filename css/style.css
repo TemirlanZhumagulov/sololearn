@@ -76,6 +76,7 @@ body{
 	display: grid;
 	justify-content: center;
 	grid-template-columns: 28% 28% 28%;
+	grid-template-rows: 1fr 1fr;
 	grid-gap: 32px;
 	grid-template-areas: 
 	"a b c" 
@@ -84,8 +85,9 @@ body{
 .about__item{
 	background-color: white;
 	text-align: center;
-	height: 500px;
 	line-height: 1.5;
+	box-sizing: border-box;
+	padding-bottom: 60px;
 }
 .about__item h2{
 	font-size: 40px;
@@ -101,6 +103,9 @@ body{
     font-size: 20px;
     font-family: "Fira Sans", sans-serif;
 }
+.about__item img{
+
+}
 .about__item_a{
 	grid-area: a;
 }
@@ -114,13 +119,15 @@ body{
 	padding-left: 0px;
 }
 .about__text{
-	padding-top: 130px;
+	padding-top: 120px;
 }
 .about__item_d{
 	grid-area: d;
 	display: flex;
 	text-align: left;
 	padding-left: 5%;
+	padding-top: 10px;
+	padding-bottom: 0px;
 }
 .about__item_e{
 	grid-area: e;
@@ -149,6 +156,7 @@ body{
     font-size: 20px;
     font-family: "Fira Sans", sans-serif;
 }
+
 @media screen and (max-width: 650px) {
 	.wrapper{
 		width: 100%;
@@ -178,4 +186,15 @@ body{
 	.slider__buttons{
 		display: none;
 	}
+	.about__grid{
+		display: block;
+	}
+	.about__item{
+		margin-top: 32px;
+	}
+	.about__item_d{
+		display: block;
+		text-align: center;
+	}
 }
+
